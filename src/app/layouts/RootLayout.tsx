@@ -12,7 +12,7 @@ const RootLayout = ({
   return (
     <main
       className={`
-      min-h-screen w-full bg-neutral-200 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-50
+      bg_base__primary min-h-screen w-full text-neutral-800 dark:text-neutral-50
       ${className}
     `}
     >
