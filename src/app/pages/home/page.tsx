@@ -1,5 +1,9 @@
+import MainLayout from "@/app/layouts/MainLayout"
+
 const HomePage = () => {
-   return <div>home page</div>
+  return (
+    <MainLayout pageTitle="Inicio">home page</MainLayout>
+  )
 }
 
 export default HomePage

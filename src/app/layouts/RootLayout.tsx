@@ -7,7 +7,7 @@ const RootLayout = ({
   className = ""
 }: LayoutProps) => {
   useLayoutEffect(() => {
-    document.title = `Template | ${pageTitle}`
+    document.title = `Agenda | ${pageTitle}`
   }, [pageTitle])
   return (
     <main
