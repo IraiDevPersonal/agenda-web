@@ -4,7 +4,7 @@
 
 @layer components {
   .bg_base__primary {
-    @apply bg-red-200 dark:bg-neutral-950;
+    @apply bg-neutral-200 dark:bg-neutral-950;
   }
 
   .bg_base__secondary {

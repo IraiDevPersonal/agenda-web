@@ -1,5 +1,6 @@
 import { IconBell } from "@tabler/icons-react"
 import { BurgerBtn, IconButton } from "../"
+import { DarkModeSw } from "./DarkModeSw"
 
 export const Header = () => {
   return (
@@ -11,6 +12,7 @@ export const Header = () => {
       <IconButton className="hover:bg-neutral-300 dark:hover:bg-neutral-700">
         <IconBell />
       </IconButton>
+      <DarkModeSw />
     </header>
   )
 }
