@@ -1,4 +1,7 @@
 export * from "./navigation/BurgerBtn"
+export * from "./navigation/Link"
 export * from "./navigation/Sidebar"
 export * from "./ui/Buttons"
+export * from "./ui/DarkModeSw"
 export * from "./ui/Header"
+export * from "./user/UserProfile"

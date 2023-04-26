@@ -1,3 +1,6 @@
+import { twCn } from "@/utils/tw-classNames"
+import { Link, UserProfile } from "../"
+
 interface Props {
   children: React.ReactNode
   className?: string
@@ -9,19 +12,27 @@ export const Sidebar = ({
 }: Props) => {
   return (
     <aside
-      className={`bg_base__primary flex h-screen w-80 flex-col divide-y divide-neutral-400 border-r border-neutral-400 dark:divide-neutral-700 dark:border-neutral-700 ${className}`}
+      className={twCn([
+        "flex h-screen w-80 flex-col bg-neutral-50",
+        "divide-y divide-neutral-200 border-r border-neutral-200",
+        "dark:divide-neutral-700 dark:border-neutral-700 dark:bg-neutral-800",
+        className
+      ])}
     >
       {children}
       <section className="flex-1 p-8">
         <nav>
           <ul className="space-y-1">
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
+            <Link to="/">Item 1</Link>
+            <Link to="/2">Item 2</Link>
+            <Link to="/3">Item 3</Link>
+            <Link to="/4">Item 4</Link>
           </ul>
         </nav>
       </section>
-      <footer className="p-8">Usuario</footer>
+      <footer className="p-8">
+        <UserProfile />
+      </footer>
     </aside>
   )
 }
