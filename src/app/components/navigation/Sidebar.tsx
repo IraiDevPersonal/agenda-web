@@ -1,4 +1,4 @@
-import { twCn } from "@/utils/tw-classNames"
+import { twCn } from "@/utils/tailwind.utilities"
 import { Link, UserProfile } from "../"
 
 interface Props {

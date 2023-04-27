@@ -1,11 +1,24 @@
 import { IconSelector } from "@tabler/icons-react"
-import { twCn } from "@/utils/tw-classNames"
+import { Dropdown, DropdownItem } from "../"
+import { twCn } from "@/utils/tailwind.utilities"
 
 export const UserProfile = () => {
   return (
-    <>
-      <UserButton />
-    </>
+    <Dropdown
+      positionEl="top"
+      btnComponent={<UserButton />}
+    >
+      <DropdownItem
+        onClick={() => console.log("ver perfil")}
+      >
+        ver perfil
+      </DropdownItem>
+      <DropdownItem
+        onClick={() => console.log("cerrar sesion")}
+      >
+        Cerrar sesion
+      </DropdownItem>
+    </Dropdown>
   )
 }
 
@@ -15,7 +28,7 @@ const UserButton = () => {
       className={twCn([
         "flex w-full items-center justify-between gap-3 px-3 py-1.5",
         "cursor-pointer outline-none transition-colors duration-200",
-        "rounded-lg bg-neutral-200/60 text-neutral-500 hover:bg-neutral-300/60",
+        "rounded-xl bg-neutral-200/60 text-neutral-500 hover:bg-neutral-300/60",
         "dark:bg-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-600"
       ])}
     >

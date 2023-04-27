@@ -4,6 +4,7 @@ import {
   IconMoonFilled
 } from "@tabler/icons-react"
 import { useDarkMode } from "@/app/hooks/useDarkMode"
+import { twCn } from "@/utils/tailwind.utilities"
 
 export const DarkModeSw = () => {
   const { isActive, handleToggleDarkMode } = useDarkMode()
@@ -11,7 +12,10 @@ export const DarkModeSw = () => {
   return (
     <label
       htmlFor={darKModeId}
-      className="w-11 cursor-pointer rounded-full bg-neutral-300 p-1 py-1.5 pl-1.5 dark:bg-neutral-700"
+      className={twCn([
+        "relative h-9 w-14 cursor-pointer rounded-full bg-neutral-300 p-1",
+        "dark:bg-neutral-700"
+      ])}
     >
       <input
         hidden
@@ -21,7 +25,13 @@ export const DarkModeSw = () => {
         checked={isActive}
         onChange={handleToggleDarkMode}
       />
-      <span className="left-0 grid w-4 h-4 transition-transform duration-200 rounded-full place-content-center dark:translate-x-full">
+      <span
+        className={twCn([
+          "absolute grid h-7 w-7 place-content-center rounded-full bg-neutral-50",
+          "translate-x-0 transition-transform duration-200",
+          "dark:translate-x-3/4 dark:bg-neutral-900"
+        ])}
+      >
         {isActive ? (
           <IconMoonFilled className="text-indigo-400" />
         ) : (
